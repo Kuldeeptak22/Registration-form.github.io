@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Responsive Sign Up page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Sign Up Your Account</div>
+      <form
+        action="/submit.php"
+        name="myForm"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <div class="userDeatils">
+          <div class="input-box" id="name">
+            <input type="text" placeholder="Full Name" name="UFname" required />
+            <div class="formError"></div>
+          </div>
+
+          <div class="input-box" id="UserName">
+            <input type="text" placeholder="User Name" name="Uname" required />
+            <div class="formError"></div>
+          </div>
+
+          <div class="input-box" id="UserEmail">
+            <input type="email" placeholder="Email" name="Uemail" required />
+            <div class="formError"></div>
+          </div>
+
+          <div class="input-box" id="UserPhone">
+            <input
+              type="number"
+              placeholder="Phone No."
+              name="Uphone"
+              required
+            />
+            <div class="formError"></div>
+          </div>
+
+          <div class="input-box" id="UserPass">
+            <input
+              type="password"
+              placeholder="Password"
+              name="Upass"
+              required
+            />
+            <div class="formError"></div>
+          </div>
+
+          <div class="input-box" id="UserConfirmPass">
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="UCpass"
+              required
+            />
+            <div class="formError"></div>
+          </div>
+        </div>
+
+        <div class="genderDetails">
+          <!-- Three Radio buttons  -->
+          <input type="radio" name="gender" id="Dot1" />
+          <input type="radio" name="gender" id="Dot2" />
+          <input type="radio" name="gender" id="Dot3" />
+
+          <div class="category">
+            <label for="Dot1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="Dot2">
+              <span class="dot two" name="gender"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="Dot3">
+              <span class="dot three" name="gender"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+            <div id="UserGender">
+              <p class="formError"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="button" id="UserGender">
+          <input type="submit" value="Create My Account" />
+        </div>
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
